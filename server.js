@@ -1,6 +1,4 @@
 import express from "express";
-import morgan from "morgan";
-import cors from "cors";
 import apiRouter from "./routes";
 import config from "./config";
 import {errorHandler} from "./middlewares/errorHandler.js";
@@ -27,6 +25,6 @@ app.use((err, req, res, next) => {
  * Bind the app to a specified port
  * You can access your app at http://localhost:<port>
  */
-app.listen(config.port || 5000, () =>
+app.listen(config.port || 3000, () =>
   console.log(`Server listening on port ${config.port}...`)
 );
